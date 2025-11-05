@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin:0; box-sizing:border-box; font-family: "새굴림";}
+        body {overflow-x: hidden;}
+        ul,ol,li {list-style:none; margin:0; padding:0;}
+        header{width: 1185px; height: 120px; margin:0 auto; /* background-color: gold;  */}
+        a {text-decoration: none;}
+        #login{width: 195px; height: 30px; float: right; margin:5px 5px 0 0; /* background-color: brown; */ } 
+        #login span{
+            width: 245px;height: 60px; 
+            font-family: "돋움"; font-size: 12px; color:gray; text-decoration: none;
+        }
+        #login a:hover {color:rgb(235, 23, 235);}
+        #logo{width: 120px; height: 60px; float: left; margin:10px 0 0 10px; /* background-color: rgb(184, 7, 184);*/}
+        #logo > img {width:80%; height:80%; margin:10px 0}
+        #logo_title{width: 400px; height: 60px; float: left; margin:10px 0 0 10px; /* background-color:tomato */}
+        #logo_title ul{font-family: "맑은 고딕"; font-size: 15px; font-weight: bold;}
+        #logo_title ul li{float: left; margin:20px 5px;}
+        #logo_title ul li span {color:rgb(235, 23, 235);}
+        #logo_title ul li a {color:lightslategray}
+        #logo_title ul li a:hover {color:rgb(235, 23, 235);}
+        #search{width: 400px; height: 60px; float: left; margin:10px 0 0 10px; /*background-color:tomato;*/
+                border-radius:0%;
+                }
+
+        nav{width: 920px; height: 40px; float: right;margin:30px 0px 0 0; /* background-color: rgb(160, 160, 245); */ }
+        nav ul{font-family: "새굴림"; font-size: 15px; font-weight: bold;}
+        nav ul li{float: left; margin:0 50px;}
+        nav ul li a {color:#666;}
+        nav ul li a:hover {color:purple;text-decoration:underline;}
+        #slider{width: 2480px; height: 530px; margin:0 0 0 5px; /*background-color: tomato;*/ }
+        section{width: 100%; height:2000px; margin:0 auto; background-color: rgb(250, 235, 252); }
+        #section_tit{width: 2480px; height: 80px; margin:0 0px 0 5px; background-color: purple; }
+        #section_tit  #section_tit1{
+            width: 550px; height: 70px; float: left;
+            margin:10px 10px 10px 10px; 
+            /* background-color: gold;  */
+        }
+        #section_tit #section_tit1 p{font-family: "새굴림"; font-size: 15px; color:white; float: right; margin:25px 0px; opacity: 50%;}
+        #section_tit #section_tit2{
+            width: 150px; height: 70px; float: left;
+            margin:10px 10px 10px 10px; 
+           /* background-color: gold;  */
+        }
+        #section_tit #section_tit2 > p{font-family: "새굴림"; font-size: 15px; color:white; margin:25px 80px; opacity: 50%;}
+        #section_tit #section_tit3{
+            width: 350px; height: 70px; float: left;
+            margin:10px 10px 10px 10px; 
+            /* background-color: gold;  */
+        }
+        #section_tit #section_tit3 > p{font-family: "새굴림"; font-size: 15px; color:white; margin:25px 90px;opacity: 50%; }
+        #section_tit #section_tit4{
+            width: 100px; height: 70px; float: left;
+            margin:10px 10px 10px 10px; 
+            /* background-color: gold;  */
+        }
+        #section_tit #section_tit4 > p{font-family: "새굴림"; font-size: 15px; color:white; margin:25px 0px; opacity: 50%;}
+        #section_tit #section_tit5{
+            width: 350px; height: 70px; float: left;
+            margin:10px 10px 10px 10px; 
+           /* background-color: gold;  */
+        }
+        #section_tit #section_tit5 p{font-family: "새굴림"; font-size: 15px; color:white; float: left; margin:25px 70px; opacity: 50%;}
+        /* section #article{width: 100%; height: 500px; float: left; margin:0 auto; background-color: yellow; }*/
+        /*
+        section #article1{width: 700px; height: 120px; float: left; margin:0px 550px;  background-color: skyblue;}
+        section #article1 #article1-1 > p{font-family: "Tahoma"; font-size: 20px; color:purple; margin:0px 200px; opacity: 80%; font-weight: bold; }
+        section #article1 #article1-2 > p{font-family: "새굴림"; font-size: 22px; color:rgb(63, 55, 55); margin:15px 170px;  }
+        */
+        section #article{width: 1750px; height: 750px; float: left; margin:10px 10px; /* background-color: skyblue;*/}
+        section #article1{width: 1750px; height: 650px; float: left; /* background-color: skyblue;*/}
+        section #article1 > img {width:1700px; height:650px; float: left; margin:0px 60px; }
+        section #article2{width: 1750px; height: 100px; float: left; /* background-color: skyblue;*/}
+        section #article2 > img {width:1700px; height:100px; float: left; margin:0px 60px; }
+        section #article4{width: 2000px; height: 400px; float: left; margin:0px 0px; /* background-color: skyblue; */} 
+        #article4 #article4-1 {width:300px; height:400px; float: left; margin:0px 0px 200px 300px; /*background-color: yellow;*/}
+        #article4 #article4-2 {width:300px; height:400px; float: left; margin:0px 0px 300px 10px; /*background-color: greenyellow;*/}
+        #article4 #article4-3 {width:300px; height:400px; float: left; margin:0px 0px 300px 10px; /*background-color: orange;*/} 
+        #article4 #article4-4 {width:300px; height:400px; float: left; margin:0px 0px 300px 10px; /*background-color: yellow;*/} 
+        #article4-1 > img {width:100%; height:100%; float: left; margin:0px auto; } 
+        #article4-2 > img {width:100%; height:100%; float: left; margin:0px auto; } 
+        #article4-3 > img {width:100%; height:100%; float: left; margin:0px auto; } 
+        #article4-4 > img {width:100%; height:100%; float: left; margin:0px auto; } 
+        section #article5{width: 2000px; height: 400px; float: left; margin:10px 0px; /* background-color: skyblue;*/}
+        #article5 #article5-1 {width:300px; height:400px; float: left; margin:10px 0px 200px 300px; /* background-color: yellow; */} 
+        #article5 #article5-2 {width:300px; height:400px; float: left; margin:10px 0px 300px 10px; /* background-color: greenyellow;*/}
+        #article5 #article5-3 {width:300px; height:400px; float: left; margin:10px 0px 300px 10px; /*background-color: orange;*/} 
+        #article5 #article5-4 {width:300px; height:400px; float: left; margin:10px 0px 300px 10px; /* background-color: yellow; */} 
+        #article5-1 > img {width:100%; height:100%; float: left; margin:0px auto; } 
+        #article5-2 > img {width:100%; height:100%; float: left; margin:0px auto; } 
+        #article5-3 > img {width:100%; height:100%; float: left; margin:0px auto; } 
+        #article5-4 > img {width:100%; height:100%; float: left; margin:0px auto; } 
+        footer {width:100%; height:300px; border-top:1px solid white; margin:0 auto;}
+        footer > #foot1 {width:100%; height:430px; border-top:1px solid white; margin:0 auto; }
+        footer > #foot1 > #box {width:1240px; height:130px; float: center; margin:20px 440px;}
+        footer > #foot2 {width:100%; height:100px; border-top:1px solid white; margin:0 auto; background-color: rgb(247, 247, 247);}
+        footer > #foot2 > #box {width:800px; height:100px; margin:0px 0 0 550px; }
+        footer > #foot2 > #box > p { float:left; width:750px; height:50px; line-height:150%; margin:0px 0 0 10px; font-family: "Tomaho";font-size:10px; color: #666;}
+    </style>
+</head>
+<body>
+    <header>
+        <div id="login">
+            <a href="https://www.kurly.com/member/signup"><span>회원가입</span></a>
+            <span> | </span>
+            <a href="https://www.kurly.com/member/login?return_url=https%3A%2F%2Fevent.kurly.com%2Flego%2Fevent%2F2023%2F0911%2Fjoin%2Fcoupon%3F%25243p%3Da_custom_1311603463982995667%26~agency_id%3D284%26%2524deeplink_path%3Dopen%253Furl%253Dhttps%25253A%25252F%25252Fevent.kurly.com%25252Flego%25252Fevent%25252F2023%25252F0911%25252Fjoin%25252Fcoupon%26%2524android_passive_deepview%3Dfalse%26%2524ios_passive_deepview%3Dfalse%26~tags%3D1055%26~campaign%3D21533696829%26~ad_set_name%3D189689558144%26~keyword%3D%25EB%25A7%2588%25EC%25BC%2593%25EC%25BB%25AC%25EB%25A6%25AC%26gad_source%3D1%26gad_campaignid%3D21533696829%26gbraid%3D0AAAAADM2qzJO0d5_umLvI2zcUzDtNhbTp%26gclid%3DCjwKCAiAwqHIBhAEEiwAx9cTeWQ408w0TU3x3FoHH12UUrKUGR5jC_1OJtPj7ram51Ma59NArzl0XBoCKZ8QAvD_BwE%26_branch_match_id%3D1512737656171069656%26_branch_referrer%3DH4sIAAAAAAAAA32RXW%252BbMBSGf425TLCNCUxCExCytFnbdQratBvLARecAKbmq8kFv32GJmqlSfPF0etzfM776Dhv27r5slyeOlWcF6yuF4WoTsuvAFm49hhNuqaVJYUYQtvElo1dB7kuse2VMbKMV8mZitRDjmXojpTzemqnNWtzT9a8AnijBwO8zicfgAj2dUCbOfCeV%252B3i3TmR5ZwreCY%252FirNCJsKzMF0IZ3GUoppFIrtaVpM1q1IlRaqdm0b0nE4oveCD98KKhk8vhGz%252BU9WiOLDkRDWN9w47oWrQfzGvkDfEK%252BAV7wp3QxtbljUeNAkxxoSVNRNZ5SFIMLZdW69SbzGlDW9pxUruQUcnXUIcaFnGeOLnQarUA1EA%252FBVwHBCFIAiBi2ehk%252BFcsrUwsmmO7FSip8yXm9v0PZ%252F8soNiOmX601k%252FoNfL%252FZOZEtqV3%252Fs7dEniy7p9zA%252F72siSQj8Mj8Mu9IU%252FvG7vgtyPIjH4b26y57%252BeLdMZzH2M3%252FBGbrcQxbHaxd9%252BkmNI4dN9%252B%252BO4Uqwk8IER99FXl8L8Hchw98d59vs1DYbIGBV%252F4UqJKqMHJYeGKy%252FMlSz5X4R%252BH%252FKWAgAA"><span>로그인</span></a>
+            <span> | </span>
+            <a href="https://www.kurly.com/board/notice"><span>고객센터</span></a>
+        </div>
+        <div id="logo"><img src="img/logo.png"></div>
+        <div id="logo_title">
+            <ul>
+                <li><span>마켓컬리</span></li>
+                <li><a href="#">|</a></li>
+                <li><a href="https://www.kurly.com/main/beauty">뷰티컬리</a></li>
+            </ul>
+        </div>
+        <div id="search">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://www.kurly.com/collection-groups/market-newproduct?site=MARKET&page=1&collection=newranking1">신상품</a></li>
+                <li><a href="https://www.kurly.com/collection-groups/market-best?site=MARKET&page=1&collection=market-best-logic">베스트</a></li>
+                <li><a href="https://www.kurly.com/collection-groups/market-sales-group?site=MARKET&page=1&collection=market-sales-main1">알뜰쇼핑</a></li>
+                <li><a href="https://www.kurly.com/market-benefit">특가/혜택</a></li>
+            </ul>
+        </nav> 
+        
+    </header>
+    <div id="slider">
+        <img src="img/pc_intro_251103.jpg">
+    </div>
+    <section>
+        <div id="section_tit">
+            <div id="section_tit1"><p>첫 구매 쿠폰</p></div>
+            <div id="section_tit2"><p>|</p></div>
+            <div id="section_tit3"><p>베스트 상품</p></div>
+            <div id="section_tit4"><p>|</p></div>
+            <div id="section_tit5"><p>친구초대</p></div>
+        </div>
+        <!--
+        <div id="article1">
+            <div id="article1-1"><p><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WELCOME COUPON</p></div>
+            <div id="article1-2"><p>&nbsp;&nbsp;&nbsp;&nbsp;컬러가 처음인 고객님께<br>&nbsp;&nbsp;최대 1만5천원 쿠폰을 드려요</p></div>
+        </div> -->
+        <div id="article">
+            <div id="article1"><img src="img/arc1.png"></div>
+            <div id="article2"><img src="img/arc2.png"></div>
+            <div id="article3"><img src="img/arc3.png"></div>
+            <div id="article4">
+                <div id="article4-1"><img src="img/1.jpeg"></div>
+                <div id="article4-2"><img src="img/2.jpg"></div>
+                <div id="article4-3"><img src="img/3.jpeg"></div>
+                <div id="article4-4"><img src="img/4.jpg"></div>
+            </div>
+            <div id="article5">
+                <div id="article5-1"><img src="img/5.jpg"></div>
+                <div id="article5-2"><img src="img/6.jpg"></div>
+                <div id="article5-3"><img src="img/7.jpg"></div>
+                <div id="article5-4"><img src="img/8.jpg"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="foot1">
+          <div id="box">
+            <img src="img/footer.png">
+          </div>
+      </div>
+      <div id="foot2">
+        <div id="box">
+            <p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                컬리에서 판매되는 상품 중에는 컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.<br>
+            마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문,품질,교환/환불 등 의무와 책임을 부담하지 않습니다.
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            ⓒ KURLY CORP. ALL RIGHTS RESERVED
+            </p>
+        </div>
+      </div>
+
+    </footer>
+</body>
+</html>
